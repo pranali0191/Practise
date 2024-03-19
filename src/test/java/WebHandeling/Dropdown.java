@@ -22,13 +22,7 @@ public class Dropdown {
 		Select dd=new Select(ele);
 		System.out.println(dd.isMultiple());
 		
-		//Singleselection
-		dd.selectByIndex(1);
-		Thread.sleep(2000);
-		dd.selectByVisibleText("Amazon Devices");
-		Thread.sleep(2000);
-		dd.selectByValue("search-alias=fashion");
-		Thread.sleep(2000);
+		
 		
 		List<WebElement> allopt=dd.getOptions();
 		System.out.println("Total Options are "+allopt.size());
@@ -42,6 +36,15 @@ public class Dropdown {
 			}
 		}
 		
+		
+		
+		//Singleselection
+				dd.selectByIndex(1);
+				Thread.sleep(2000);
+				dd.selectByVisibleText("Amazon Devices");
+				Thread.sleep(2000);
+				dd.selectByValue("search-alias=fashion");
+				Thread.sleep(2000);
 	}
 
 }
